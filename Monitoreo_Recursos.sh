@@ -12,7 +12,7 @@ do
 #Calculo del uso de Ram
  memoria=$(free | grep Mem | awk '{print $4/$2 * 100}' )
 
-#Calculo uso del disco
+#Calculo uso del disco duro
  disco=$(df -h / | grep '^/' | awk '{print $5}' | sed 's/%//')
 
  echo "$tiempo, $cpu, $memoria, $disco"
